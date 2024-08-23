@@ -1,1 +1,8 @@
- "test": "vendor/bin/phpunit"
+{
+    "name": "artlov/php-compo",
+    "type": "project",
+    "description": "Testing",
+    "require": {
+        "erusev/parsedown": "^1.7"
+    }
+}
