@@ -12,14 +12,14 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Validate composer.json and composer.lock
-      run: composer validate --strict
-
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
         php-version: '5.6'
         coverage: none
+
+    - name: Validate composer.json and composer.lock
+      run: composer validate --strict
 
 #    - name: Cache Composer packages
 #      id: composer-cache
