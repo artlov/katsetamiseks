@@ -2,6 +2,7 @@
     "name": "artlov/php-compo",
     "type": "project",
     "description": "Testing",
+    "license": "MIT",
     "require": {
         "erusev/parsedown": "^1.7"
     }
