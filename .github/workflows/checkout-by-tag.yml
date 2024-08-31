@@ -1,0 +1,19 @@
+name: Checkout by tag
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag name to checkout'
+        required: true
+
+jobs:
+  get-code:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.tag }}
+      - name: Print content
+        run: |
+          cat ./version.txt
+          
