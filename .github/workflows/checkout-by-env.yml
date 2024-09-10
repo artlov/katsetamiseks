@@ -25,9 +25,9 @@ jobs:
           
       - name: Check env selection
         run: |
-          if [[ ${{ vars.SYSTEM_HOME }} != 'i3' ]]; then
-            echo "Ei ole i3"
+          if [[ ${{ input.choice }} != 'live' ]]; then
+            echo "Ei ole live"
           else
-            echo "Peaks olema i3"
+            echo "Peaks olema live"
           fi
   
