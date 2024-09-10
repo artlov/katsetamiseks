@@ -25,9 +25,9 @@ jobs:
           
       - name: Check env selection
         run: |
-          if [[ '${{ github.environment }}' != 'live' ]]; then
-            echo "Ei ole live"
+          if [[ "${{ github.environment }}" == "live" ]]; then
+            echo "live"
           else
-            echo "On live"
+            echo "no live"
           fi
   
