@@ -25,9 +25,9 @@ jobs:
           
       - name: Check env selection
         run: |
-          if [[ ${{ vars.SYSTEM_HOME }} == 'i3' ]]; then
-            echo "Valitud i3"
+          if [[ ${{ vars.SYSTEM_HOME }} != 'i3' ]]; then
+            echo "Ei ole i3"
           else
-            echo "Valitud muu"
+            echo "Peaks olema i3"
           fi
   
