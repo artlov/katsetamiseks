@@ -25,9 +25,9 @@ jobs:
           
       - name: Check env selection
         run: |
-          if [[ ${{ input.choice }} != 'live' ]]; then
-            echo "Ei ole live"
+          if [[ ${{ github.environment }} == 'live' ]]; then
+            echo "On live"
           else
-            echo "Peaks olema live"
+            echo "Ei ole live"
           fi
   
