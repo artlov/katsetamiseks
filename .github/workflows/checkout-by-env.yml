@@ -24,11 +24,11 @@ jobs:
           echo "Selected env2: ${{ inputs.environment }}"
           echo "System home: ${{ vars.SYSTEM_HOME }}"
           
-      #- name: Check env selection
-      #  run: |
-      #    if [[ "${{ github.environment }}" == "live" ]]; then
-      #      echo "live"
-      #    else
-      #      echo "no live"
-      #    fi
+      - name: Check env selection
+        run: |
+          if [[ "${{ inputs.environment }}" == "live" ]]; then
+            echo "live"
+          else
+            echo "no live"
+          fi
   
