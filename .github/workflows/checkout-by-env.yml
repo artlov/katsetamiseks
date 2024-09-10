@@ -25,6 +25,7 @@ jobs:
           echo "System home: ${{ vars.SYSTEM_HOME }}"
           
       - name: Check env selection
+        if: inputs.environment == "live"
         run: |
           if [[ "${{ inputs.environment }}" == "live" ]]; then
             echo "live"
