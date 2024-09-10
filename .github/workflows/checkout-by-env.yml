@@ -2,7 +2,7 @@ name: Checkout by env
 on:
   workflow_dispatch:
     inputs:
-      choice:
+      environment:
         type: choice
         description: Please select the environment to use
         default: 'dev'
@@ -14,7 +14,7 @@ on:
 jobs:
   get-code:
     runs-on: ubuntu-latest
-    environment: ${{ inputs.choice }}
+    environment: ${{ github.event.inputs.environment }}
     steps:
       - uses: actions/checkout@v4
 
