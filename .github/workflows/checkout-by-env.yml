@@ -1,0 +1,25 @@
+name: Checkout by env
+on:
+  workflow_dispatch:
+    inputs:
+      choice:
+        type: choice
+        description: Please select the environment to use
+        default: 'dev'
+        options:
+        - dev
+        - live
+
+
+jobs:
+  get-code:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.choice }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Print content
+        run: |
+          cat ./version.txt
+          echo "Sysetm home: ${{ variable.SYSTEM_HOME }}"
+          
