@@ -20,8 +20,8 @@ jobs:
 
       - name: Print content
         run: |
-          echo "Selected env: ${{ github.event.inputs.environment }}"
-          echo "Selected env: ${{ inputs.choice }}"
+          echo "Selected env1: ${{ github.event.inputs.environment }}"
+          echo "Selected env2: ${{ inputs.choice }}"
           echo "System home: ${{ vars.SYSTEM_HOME }}"
           
       #- name: Check env selection
