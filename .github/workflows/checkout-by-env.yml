@@ -23,3 +23,8 @@ jobs:
           echo "Selected env: ${{ inputs.choice }}"
           echo "System home: ${{ vars.SYSTEM_HOME }}"
           
+          - name: Check env selection
+          if: ${{ vars.SYSTEM_HOME == 'i3' }}
+          run: |
+            echo "Valitud i3"
+  
