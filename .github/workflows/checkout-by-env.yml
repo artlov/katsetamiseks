@@ -20,6 +20,6 @@ jobs:
 
       - name: Print content
         run: |
-          cat ./version.txt
-          echo "System home: $SYSTEM_HOME"
+          echo "${{ inputs.choice }}"
+          echo "System home: ${{ env.SYSTEM_HOME }}"
           
