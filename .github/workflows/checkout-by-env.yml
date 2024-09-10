@@ -20,7 +20,7 @@ jobs:
 
       - name: Print content
         run: |
-          echo "Selected env: ${{ github.environment }}"
+          echo "Selected env: ${{ env.GITHUB_ENVIRONMENT }}"
           echo "System home: ${{ vars.SYSTEM_HOME }}"
           
       #- name: Check env selection
