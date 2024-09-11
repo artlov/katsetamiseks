@@ -5,10 +5,14 @@ on:
       environment:
         type: choice
         description: Please select the environment to use
-        default: 'dev'
-        options:
-        - dev
-        - live
+#        default: 'dev'
+#        options:
+#        - dev
+#        - live
+        required: true
+        options: ['dev', 'live', 'test']
+
+
 
 
 jobs:
